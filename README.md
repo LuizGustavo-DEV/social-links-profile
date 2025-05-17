@@ -6,12 +6,9 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -20,11 +17,6 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 Users should be able to:
 
 - See hover and focus states for all interactive elements on the page
-
-### Links
-
-- Solution URL: [Repository](https://github.com/LuizGustavo-DEV/social-links-profile)
-- Live Site URL: [GitHub Pages](https://your-live-site-url.com)
 
 ## My process
 
