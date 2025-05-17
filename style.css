@@ -1,0 +1,241 @@
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf) format("truetype");
+}
+
+:root {
+  --color-primary-400: hsl(75, 94%, 57%);
+
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-400: hsl(0, 0%, 20%);
+  --color-neutral-800: hsl(0, 0%, 12%);
+  --color-neutral-900: hsl(0, 0%, 8%);
+
+  --ratio: 1.778;
+
+  --base-size: 0.875rem;
+
+  --font-size-400: var(--base-size);
+  --font-size-500: calc((var(--font-size-400) * var(--ratio)));
+
+  --line-height-400: 1.5;
+
+  --space-200: calc((var(--space-300) / var(--ratio)));
+  --space-300: calc((var(--base-size) / var(--ratio)));
+  --space-400: var(--base-size);
+  --space-500: calc((var(--space-400) * var(--ratio)));
+  --space-600: calc((var(--space-500) * var(--ratio)));
+
+  --border-radius-200: calc(var(--border-radius-300) / var(--ratio));
+  --border-radius-300: calc(var(--base-size) / var(--ratio));
+
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  block-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-400);
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-900);
+  padding: var(--space-500);
+  min-block-size: 100%;
+  line-height: var(--line-height-400);
+  margin: 0;
+
+  /* For demo purposes */
+  display: grid;
+  place-content: center;
+  grid-auto-columns: min(24rem, 100%);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+h1 {
+  font-size: var(--font-size-500);
+  font-weight: var(--font-weight-700);
+}
+
+/* Composition */
+.center {
+  margin-inline: auto;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--flow-aligment, center);
+}
+
+.flow > * {
+  margin-block-end: 0;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-400));
+}
+
+/* Utility */
+.text-align-center {
+  text-align: center;
+}
+
+.background-color-neutral-800 {
+  background-color: var(--color-neutral-800);
+}
+
+.color-primary-400 {
+  color: var(--color-primary-400);
+}
+
+.font-weight-600 {
+  font-weight: var(--font-weight-600);
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-500 {
+  padding: var(--space-500);
+}
+
+.margin-block-start-500 {
+  margin-block-start: var(--space-500);
+}
+
+.margin-block-end-0 {
+  margin-block-end: 0;
+}
+
+.border-radius-300 {
+  border-radius: var(--border-radius-300);
+}
+
+/* Block */
+.avatar {
+  aspect-ratio: 1 / 1;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 5.5rem;
+  max-block-size: 5.5rem;
+  border-radius: 50%;
+}
+
+.button {
+  display: inline-flex;
+  color: inherit;
+  background-color: var(--color-neutral-400);
+  text-decoration: none;
+  justify-content: center;
+  padding-block: var(--space-400);
+  padding-inline: var(--space-400);
+  font-weight: var(--font-weight-600);
+  border-radius: var(--border-radius-200);
+  align-items: center;
+  inline-size: 100%;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--color-neutral-800);
+    background-color: var(--color-primary-400);
+  }
+}
+
+.button:focus {
+  color: var(--color-neutral-800);
+  background-color: var(--color-primary-400);
+}
+
+.button:focus-visible {
+  outline: var(--space-200) solid var(--color-primary-400);
+  outline-offset: var(--space-200);
+}

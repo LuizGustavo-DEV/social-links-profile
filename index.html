@@ -1,34 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+    <title>Frontend Mentor | Social links profile</title>
+  </head>
+  <body>
+    <article
+      class="background-color-neutral-800 padding-500 border-radius-300 text-align-center"
+    >
+      <img
+        class="[ avatar ] [ center ]"
+        src="https://avatars.githubusercontent.com/u/127148481?s=96&v=4"
+        alt=""
+        aria-labelledby="author"
+      />
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div
+        class="[ flow ] [ margin-block-start-500 ]"
+        style="--flow-space: var(--space-300)"
+      >
+        <h1 id="author">Luiz Gustavo</h1>
+        <p class="color-primary-400 font-weight-600">Brazil</p>
+        <p class="margin-block-start-500">"Front-end Engineer."</p>
+      </div>
+
+      <ul
+        class="[ flow ] [ margin-block-start-500 margin-block-end-0 padding-0 ]"
+        style="--flow-aligment: stretch"
+        role="list"
+      >
+        <li role="listitem">
+          <a
+            class="button"
+            href="https://github.com/LuizGustavo-DEV"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </li>
+        <li role="listitem">
+          <a
+            class="button"
+            href="https://www.frontendmentor.io/profile/LuizGustavo-DEV"
+            target="_blank"
+            rel="noreferrer"
+            >Frontend Mentor</a
+          >
+        </li>
+      </ul>
+    </article>
+  </body>
 </html>
